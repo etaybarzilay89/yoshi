@@ -1,7 +1,9 @@
 import * as i18next from 'i18next';
+import ICU from 'i18next-icu';
 
 export default function i18n(locale) {
   return i18next
+    .use(ICU)
     .use({
       type: 'backend',
       read: (language, namespace, callback) => {
